@@ -36,7 +36,19 @@ namespace ConsoleAppStartingOOP.Model
             }
         }
 
+        public string FullName { get { return $"{firstName} {lastName}"; } }
 
         //by defualt, if i dont make a cunstructor, C# will make one
+
+        public Person(string firstName, string lastName)
+        {
+            this.firstName = firstName;
+            this.lastName = lastName;
+        }
+
+        public string IntroduceYourself()
+        {
+            return $"Hello my name is {FullName}";
+        }
     }
 }

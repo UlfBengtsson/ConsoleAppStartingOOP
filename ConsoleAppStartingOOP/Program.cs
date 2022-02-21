@@ -7,13 +7,16 @@ namespace ConsoleAppStartingOOP
     {
         static void Main(string[] args)
         {
-            Person person = new Person();
+            Person person = new Person("Ulf", "Bengttson");
 
-            person.FirstName = "Ulf";
-            person.LastName = "Bengtsson";
+            //person.FirstName = "Ulf";
+            //person.LastName = "Bengtsson";
 
             //Console.WriteLine(person);
-            Console.WriteLine($"{person.FirstName} {person.LastName}");
+            //Console.WriteLine($"{person.FirstName} {person.LastName}");
+            //Console.WriteLine(person.FullName);
+
+            Console.WriteLine(person.IntroduceYourself());
         }
     }
 }
