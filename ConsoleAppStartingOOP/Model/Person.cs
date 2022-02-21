@@ -7,6 +7,10 @@ namespace ConsoleAppStartingOOP.Model
     internal class Person
     {
         //defualt access to methods/fields is private
+        static int idCounter = 0;
+        public static int PersonsCreated { get { return idCounter; } }
+
+        int id;
 
         private string firstName;
         private string lastName;
@@ -42,13 +46,14 @@ namespace ConsoleAppStartingOOP.Model
 
         public Person(string firstName, string lastName)
         {
+            id = ++idCounter;
             this.firstName = firstName;
             this.lastName = lastName;
         }
 
         public string IntroduceYourself()
         {
-            return $"Hello my name is {FullName}";
+            return $"Hello my name is {FullName} and work ID is: {id}";
         }
     }
 }
