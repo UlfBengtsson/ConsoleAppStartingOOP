@@ -10,7 +10,7 @@ namespace ConsoleAppStartingOOP.Model
         static int idCounter = 0;
         public static int PersonsCreated { get { return idCounter; } }
 
-        int id;
+        int id;//fields are default set to 0
         public int Id { get { return id; } }
 
         private string firstName;
@@ -48,8 +48,8 @@ namespace ConsoleAppStartingOOP.Model
         public Person(string firstName, string lastName)
         {
             id = ++idCounter;
-            this.firstName = firstName;
-            this.lastName = lastName;
+            this.FirstName = firstName;
+            this.LastName = lastName;
         }
 
         public string IntroduceYourself()
