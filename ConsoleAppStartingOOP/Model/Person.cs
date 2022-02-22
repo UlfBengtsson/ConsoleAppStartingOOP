@@ -4,13 +4,14 @@ using System.Text;
 
 namespace ConsoleAppStartingOOP.Model
 {
-    internal class Person
+    public class Person
     {
         //defualt access to methods/fields is private
         static int idCounter = 0;
         public static int PersonsCreated { get { return idCounter; } }
 
         int id;
+        public int Id { get { return id; } }
 
         private string firstName;
         private string lastName;
